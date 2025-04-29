@@ -11,3 +11,4 @@ overrides:
   is-core-module: "npm:@nolyfill/is-core-module@^1"
   jsonc-eslint-parser: "-"
   toml-eslint-parser: "-"
+  vitest: "-"
