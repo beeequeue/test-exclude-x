@@ -34,17 +34,18 @@ export default antfu({
   },
   typescript: {
     tsconfigPath: "tsconfig.json",
-    ignoresTypeAware: ["copy.ts"],
+    ignoresTypeAware: ["*.config.*"],
     overrides: {
       "no-console": "off",
-      "ts/no-use-before-define": "off",
+      "antfu/no-top-level-await": "off",
+      "import/consistent-type-specifier-style": "off",
+      "node/prefer-global/process": "off",
       "ts/consistent-type-definitions": "off",
       "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
       "ts/no-unsafe-argument": "off",
       "ts/no-unsafe-assignment": "off",
-      "node/prefer-global/process": "off",
-      "antfu/no-top-level-await": "off",
-      "import/consistent-type-specifier-style": "off",
+      "ts/no-use-before-define": "off",
+      "unused-imports/no-unused-vars": "off",
 
       "import/extensions": [
         "error",
