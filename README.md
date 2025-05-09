@@ -6,11 +6,20 @@
 ![node-current](https://img.shields.io/node/v/test-exclude-x)
 -->
 
+## Goal
+
+- Re-implement `test-exclude` using tinyglobby and picomatch.
+- Do not support silly ideas like exclusion negation becomes inclusion.
+- Pass relevant tests from
+  - test-exclude
+  - c8
+
 ## Differences to `test-exclude`
 
 - Exclude negation is not supported
   ```ts
-  createExcluder({
-    exclude: ["*.js", "!file1.js"],
+  // Matches file1.js, file2.json
+  new TextExcluder({
+    exclude: ["*.js", "!file1.js", "!file2.json"],
   })
   ```
