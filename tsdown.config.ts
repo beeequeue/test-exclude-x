@@ -14,11 +14,10 @@ export default defineConfig({
   },
 
   platform: "node",
-  target: "node22",
-  format: "esm",
+  target: "node14",
+  format: ["cjs", "esm"],
   dts: true,
   fixedExtension: true,
 
-  minify: true,
-  sourcemap: true,
+  sourcemap: !process.env.IS_RELEASE,
 })
