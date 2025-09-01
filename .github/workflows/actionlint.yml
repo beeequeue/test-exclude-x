@@ -32,7 +32,7 @@ jobs:
         if: ${{ !steps.cache.outputs.cache-hit }}
         run: go install github.com/rhysd/actionlint/cmd/actionlint@${{ env.ACTIONLINT_VERSION }}
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Add matcher so we get annotations in PRs
       - name: add matcher
